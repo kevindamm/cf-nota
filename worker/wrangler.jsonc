@@ -1,0 +1,52 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "worker",
+	"main": "./.output/server/index.mjs",
+	"compatibility_date": "2025-04-17",
+	"observability": {
+		"enabled": true
+	},
+
+	/**
+	 * Bindings
+	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
+	 */
+
+	/** 
+	 * Static Assets
+	 * https://developers.cloudflare.com/workers/static-assets/binding/
+	 */
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./.output/public/"
+	},
+
+	/**
+	 * Workers AI, primarily used with Whisper in this app.
+	 * https://developers.cloudflare.com/workers-ai/models/whisper/
+	 */
+	"ai": {
+		"binding": "WHISPER"
+	},
+
+	/**
+	 * R2 a simple object storage with free bandwidth.
+	 * https://developers.cloudflare.com/r2/
+	 * The buckets are not exposed to the public internet by default,
+	 * content is routed via Workers (although you can opt to expose a bucket).
+	 */
+	"r2_buckets": [
+		{"binding": "MEDIA", "bucket_name": "nota-media"}
+	],
+
+	/**
+	 * Environment Variables and Secrets
+	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
+	 * https://developers.cloudflare.com/workers/configuration/secrets/
+	 */
+	"vars": { "MY_VARIABLE": "production_value" },
+}
