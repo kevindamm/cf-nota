@@ -1,0 +1,23 @@
+name = "nota-worker"
+main = "./.output/server/index.mjs"
+compatibility_date = "2025-04-17"
+
+[assets]
+directory = "./.output/public/"
+
+[observability]
+enabled = true
+
+[ai]
+binding = "WHISPER"
+
+# stores voice recordings and images for serving via Workers
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "nota-media"
+
+# stores an index of whose media and notes are visible (privately or publicly).
+[[d1_databases]]
+binding = "DB"
+database_name = "nota-db"
+database_id = "574f5bea-62b6-4afd-b62f-a6fee45c50e3"
