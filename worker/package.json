@@ -18,10 +18,13 @@
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250417.0",
+		"@nuxtjs/kinde": "^0.2.0",
 		"@vueuse/nuxt": "^13.1.0",
 		"h3": "^1.15.1",
 		"nitro-cloudflare-dev": "^0.2.2",
 		"nitropack": "^2.11.9",
+		"typescript": "^5.8.3",
+		"vue-tsc": "^2.2.8",
 		"wrangler": "^4.12.0"
 	}
 }

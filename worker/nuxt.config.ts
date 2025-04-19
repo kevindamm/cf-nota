@@ -1,3 +1,5 @@
+import nitroCloudflareBindings from "nitro-cloudflare-dev";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -5,12 +7,21 @@ export default defineNuxtConfig({
 
   nitro: {
     preset: "cloudflare_module",
-
+    // // Pages-like routing behavior
+    // prerender: {
+    //   autoSubfolderIndex: false
+    // },
     cloudflare: {
       deployConfig: true,
       nodeCompat: true
     }
   },
 
-  modules: ["nitro-cloudflare-dev", "@vueuse/nuxt"]
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
+    }
+  },
+
+  modules: ["nitro-cloudflare-dev", "@vueuse/nuxt", "@nuxtjs/kinde"]
 })
