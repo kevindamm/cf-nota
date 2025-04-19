@@ -30,14 +30,15 @@
 -- 
 -- github:kevindamm/cf-nota/worker/sql/drop_all.sql
 
--- DROP INDEXES in arbitrary order
+-- DROP INDEXES in arbitrary order, drop all before dropping any tables.
 DROP INDEX IF EXISTS "Audio__Note";
 DROP INDEX IF EXISTS "AudioUri__Unique";
+DROP INDEX IF EXISTS "Audio__Uploaded";
 DROP INDEX IF EXISTS "Note__Collection";
 DROP INDEX IF EXISTS "Note__Updated";
 DROP INDEX IF EXISTS "Note__Created";
 
--- DROP TABLES in reverse-topological order
+-- DROP TABLES in reverse-topological order to get ahead of CASCADE DELETE.
 DROP TABLE IF EXISTS "Note_Audio";
 DROP TABLE IF EXISTS "Note_Text";
 DROP TABLE IF EXISTS "Notes";

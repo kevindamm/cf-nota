@@ -28,17 +28,20 @@
 -- ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 -- POSSIBILITY OF SUCH DAMAGE.
 -- 
--- github:kevindamm/cf-nota/worker/sql/create_all.sql
+-- github:kevindamm/micmemo/worker/sql/create_all.sql
 
 --
--- Database TABLE and INDEX definitions for oidio
+-- Database TABLE and INDEX definitions for micmemo.kevindamm.com
 --
---   [-------]
---   | Notes |------ 1..N ---[ Note_Audio ]
---   [-------]                  +
---      + text         
---      + created_ts (indexed)
---      + updated_ts (indexed)
+--   
+--   [-------] *note_id  ,--1..N---[ Note_Text ]
+--   | Notes |-----------|             + text         
+--   [-------]           |             + updated_ts (indexed)
+--      + created_ts     |
+--        (indexed)      '--1..N---[ Note_Audio ]
+--                                     + audio_uri
+--                                     + uploaded_ts (indexed)
+--
 
 -- The main relation, a note's text transcription and its ID
 -- includes some metadata about creation and last updated
@@ -96,3 +99,7 @@ CREATE INDEX IF NOT EXISTS "Audio__Note"
 -- Each audio_url is only associated with a single (textual) note.
 CREATE UNIQUE INDEX IF NOT EXISTS "AudioUri__Unique"
   ON Note_Audio (audio_uri);
+
+-- Index on timestamp for efficient latest-of and timeline ordering.
+CREATE UNIQUE INDEX IF NOT EXISTS "Audio__Uploaded"
+  ON Note_Audio (note_id, uploaded_ts);
