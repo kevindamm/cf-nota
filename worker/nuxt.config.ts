@@ -23,5 +23,9 @@ export default defineNuxtConfig({
     }
   },
 
+  // One root CSS where dependencies are imported into layers, making cascading explicit.
+  css: ['~/assets/css/app.css'],
+
+  // zero-config modules are defined here
   modules: ["nitro-cloudflare-dev", "@vueuse/nuxt", "@nuxtjs/kinde"]
 })

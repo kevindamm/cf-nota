@@ -19,6 +19,7 @@
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250417.0",
 		"@nuxtjs/kinde": "^0.2.0",
+		"@picocss/pico": "^2.1.1",
 		"@vueuse/nuxt": "^13.1.0",
 		"h3": "^1.15.1",
 		"nitro-cloudflare-dev": "^0.2.2",
