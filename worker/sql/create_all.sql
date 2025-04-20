@@ -39,7 +39,7 @@
 --   [-------]           |             + updated_ts (indexed)
 --      + created_ts     |
 --        (indexed)      '--1..N---[ Note_Audio ]
---                                     + audio_uri
+--                                     + audio_uri (indexed)
 --                                     + uploaded_ts (indexed)
 --
 
