@@ -1,4 +1,4 @@
-@import '@picocss/pico/css/pico.classless.css' layer(reset);
+@import '@picocss/pico/css/pico.css' layer(reset);
 
 @layer layout {
   main {
