@@ -1,10 +1,30 @@
 @import '@picocss/pico/css/pico.css' layer(reset);
 
+:root {
+  --wave-color-black: #0d0101;
+  --wave-color-light: #86f986;
+  --wave-color-dark: #620cdb;
+
+  /* base 415 nm, rel sat x0.7, rel light x1.3 */
+  --wave-indigo: #6221bb;
+  --wave-redorange: #e46767;
+  --wave-eastergreen: #7de467;
+
+  /* These colors chosen to optimize the contrast between (blue | red) equipment
+     and background (black) board, while being quite clashing with each other */
+  /* https://wavepalette.com/share/4880711 */
+  /* base 488 nm, rel sat x0.7, rel light x1.1 */
+  --wave-blue: #1f99b2;  /* rgb( 31, 153, 178) */
+  --wave-board: #0a0202; /* rgb( 10,   2,   2) */
+  --wave-red: #d02525;   /* rgb(208,  37,  37) */
+}
+
 @layer layout {
-  main {
-    max-width: 800px;
-    margin: 1rem auto;
-  }
+  /* TODO global scope rules in layout layer */
+}
+
+@layer ui {
+  /* TODO global scope rules in User Interface layer */
 }
 
 @layer reset, layout, ui;

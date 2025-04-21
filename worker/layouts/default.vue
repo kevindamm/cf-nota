@@ -6,7 +6,7 @@
 </main>
 
 <footer class="container">
-  <div>Copyright &copy; 2025 Kevin Damm, all rights reserved.</div>
+  <div>Copyright &copy; 2025 Kevin Damm</div>
   <!-- TODO link terms of service, source code repo,  -->
 </footer>
 </template>
@@ -17,6 +17,10 @@
 
 <style scoped>
 @layer layout {
+
+main {
+  min-height: 83vh;
+}
 
 h1 {
   padding-top: .5lh;
