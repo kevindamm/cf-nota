@@ -12,13 +12,10 @@
 		"cf-typegen": "wrangler types"
 	},
 	"dependencies": {
-		"drizzle-kit": "^0.31.0",
-		"drizzle-orm": "^0.42.0",
-		"drizzle-zod": "^0.7.1",
+		"@zod/mini": "4.0.0-beta.20250420T053007",
 		"nuxt": "^3.16.2",
 		"vue": "^3.5.13",
-		"vue-router": "^4.5.0",
-		"zod": "^3.24.3"
+		"vue-router": "^4.5.0"
 	},
 	"devDependencies": {
 		"@cloudflare/workers-types": "^4.20250417.0",
