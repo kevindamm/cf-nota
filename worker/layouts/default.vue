@@ -3,6 +3,15 @@
 
 <main class="container-fluid">
   <slot />
+
+  <div class="ui">
+    <button>Take Note</button>
+  </div>
+<!-- TODO layout of main page
+  button [mic.svg]: start memo
+  (if exists): today's memo card (audio, text, publish, inspect)
+  (if fetched/scrolled-to): history of memos (saved/published)
+  -->
 </main>
 
 <footer class="container">
@@ -10,6 +19,7 @@
   <!-- TODO link terms of service, source code repo,  -->
 </footer>
 </template>
+
 
 <script setup lang="ts">
 // TODO... signal handler for add-note, update-note, start-record, stop-record
@@ -25,6 +35,11 @@ main {
 h1 {
   padding-top: .5lh;
   text-align: center;
+}
+
+.ui > button {
+  margin: 0 auto;
+  display: block;
 }
 
 footer.container {
