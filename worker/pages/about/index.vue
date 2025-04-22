@@ -1,3 +1,7 @@
+<!--
+
+-->
+
 <template>
-  Table of contents...
+  Interactive Table of contents...
 </template>

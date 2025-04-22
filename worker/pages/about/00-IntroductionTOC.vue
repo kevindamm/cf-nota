@@ -27,10 +27,11 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
 
-github:kevindamm/cf-nota/worker/pages/about/03-Workers.vue
+github:kevindamm/cf-nota/worker/pages/about/00-IntroductionTOC.vue
 -->
+
 <template>
-  <div class="container-fluid">
-    <h1>Cloudflare Workers</h1>
+  <div>
+    <h1>Introduction</h1>
   </div>
 </template>
