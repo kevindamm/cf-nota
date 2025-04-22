@@ -1,5 +1,15 @@
 <template>
-<h1>Mic Memo</h1> <!-- hide in some layouts? -->
+<div>
+<nav>
+  <ul>
+    <li><strong>Mic Memo</strong></li>
+  </ul>
+  <ul>
+    <li><a href="/about">About</a></li>
+    <li><a href="#">Sign In/Out</a></li> <!-- TODO v-if: log out -->
+    <li></li>
+  </ul>
+</nav>
 
 <main class="container-fluid">
   <slot />
@@ -18,11 +28,15 @@
   <div>Copyright &copy; 2025 Kevin Damm</div>
   <!-- TODO link terms of service, source code repo,  -->
 </footer>
+
+</div>
 </template>
 
 
 <script setup lang="ts">
 // TODO... signal handler for add-note, update-note, start-record, stop-record
+
+// 
 </script>
 
 <style scoped>

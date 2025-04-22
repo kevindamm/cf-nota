@@ -33,6 +33,7 @@ function toggleRecording(event: Event) {
 
 // TODO autosave, client hooks into onUnload event for conditional confirmation
 // TODO above component morphs from microphone button (default) to full controls
+// TODO emit signal when audio recording begins, when create response returns, when transcript...
 </script>
 
 <style scoped>
