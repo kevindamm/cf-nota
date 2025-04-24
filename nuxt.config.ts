@@ -69,5 +69,6 @@ export default defineNuxtConfig({
     nitroCloudflareBindings,
     '@vueuse/nuxt',
     '@nuxtjs/kinde',
+    'motion-v/nuxt',
   ]
 })

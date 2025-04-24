@@ -5,7 +5,6 @@ A full description of this source code can be found in the about/ path of the
 online demo of [Mic Memo](https://micmemo.kevindamm.com).
 -->
 
-
 Very early work in progress, scratching an itch and perhaps as a gift.
 
 ## Setup
