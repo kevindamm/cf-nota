@@ -1,13 +1,12 @@
 <template>
 <div>
 <nav>
+  <h1>Mic Memo</h1>
+
   <ul>
-    <li><strong>Mic Memo</strong></li>
-  </ul>
-  <ul>
-    <li><a href="/about">About</a></li>
+    <li><NuxtLink to="/about">About</NuxtLink></li>
     <li><a href="#">Sign In/Out</a></li> <!-- TODO v-if: log out -->
-    <li></li>
+    <li>TODO profile?</li>
   </ul>
 </nav>
 
