@@ -1,25 +1,22 @@
 <template>
 <div>
-<nav>
-  <h1>Mic Memo</h1>
-
-  <ul>
-    <li><NuxtLink to="/about">About</NuxtLink></li>
-    <li><a href="#">Sign In/Out</a></li> <!-- TODO v-if: log out -->
-    <li>TODO profile?</li>
-  </ul>
-</nav>
+<NavigationMenu />
 
 <main class="container-fluid">
   <slot />
 
   <div class="ui">
-    <button>Take Note</button>
+    <motion.button
+      initial="{opacity: 0}"
+      animate="{opacity: 1}"
+    >
+    Take Note
+  </motion.button>
   </div>
-<!-- TODO layout of main page
-  button [mic.svg]: start memo
-  (if exists): today's memo card (audio, text, publish, inspect)
-  (if fetched/scrolled-to): history of memos (saved/published)
+  <!-- TODO layout of main page
+    button [mic.svg]: start memo
+    (if exists): today's memo card (audio, text, publish, inspect)
+    (if fetched/scrolled-to): history of memos (saved/published)
   -->
 </main>
 
@@ -33,9 +30,9 @@
 
 
 <script setup lang="ts">
+import { motion } from 'motion-v';
 // TODO... signal handler for add-note, update-note, start-record, stop-record
-
-// 
+// TODO? analytics
 </script>
 
 <style scoped>
@@ -43,11 +40,6 @@
 
 main {
   min-height: 83vh;
-}
-
-h1 {
-  padding-top: .5lh;
-  text-align: center;
 }
 
 .ui > button {
