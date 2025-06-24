@@ -61,7 +61,7 @@ Build the application for production:
 pnpm build
 ```
 
-Locally preview production build:
+Locally preview production build, running from compiled output without hot-module swapping.
 
 ```sh
 pnpm preview
